@@ -1013,6 +1013,14 @@ worker:
 #tlsCADurationDays: 3650
 #tlsCertDurationDays: 365
 
+# Set the tlsCipherSuites you want the API server to use.
+# By default we are allowing the default golang ciphers.
+# The example below will set the config to ensure 3DES and weak ciphers are not supported.
+# See: https://golang.org/pkg/crypto/tls/#pkg-constants
+# Also See: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/#options
+# Under --tls-cipher-suites stringSlice
+# tlsCipherSuites: "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA"
+
 # Use custom images for kube-aws  and  kubernetes  components. Especially if you are deploying in cn-north-1 where gcr.io is blocked
 # and pulling from quay or dockerhub is slow and you get many timeouts.
 
