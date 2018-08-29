@@ -591,6 +591,7 @@ type Cluster struct {
 	RecordSetTTL            int                 `yaml:"recordSetTTL,omitempty"`
 	TLSCADurationDays       int                 `yaml:"tlsCADurationDays,omitempty"`
 	TLSCertDurationDays     int                 `yaml:"tlsCertDurationDays,omitempty"`
+	TLSCipherSuites		string              `yaml:"tlsCipherSuites,omitempty"`
 	HostedZoneID            string              `yaml:"hostedZoneId,omitempty"`
 	PluginConfigs           model.PluginConfigs `yaml:"kubeAwsPlugins,omitempty"`
 	ProvidedEncryptService  EncryptService
